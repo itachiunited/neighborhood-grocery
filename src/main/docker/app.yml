@@ -1,0 +1,21 @@
+version: '2'
+services:
+  neighborhood-app:
+    image: neighborhood
+    environment:
+      - _JAVA_OPTIONS=-Xmx512m -Xms256m
+      - SPRING_PROFILES_ACTIVE=prod,swagger
+      - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
+      - SPRING_DATA_MONGODB_URI=mongodb://neighborhood-mongodb:27017
+      - SPRING_DATA_MONGODB_DATABASE=neighborhood
+      - JHIPSTER_SLEEP=10 # gives time for the database to boot before the application
+      - SPRING_DATA_JEST_URI=http://neighborhood-elasticsearch:9200
+      - SPRING_ELASTICSEARCH_REST_URIS=http://neighborhood-elasticsearch:9200
+  neighborhood-mongodb:
+    extends:
+      file: mongodb.yml
+      service: neighborhood-mongodb
+  neighborhood-elasticsearch:
+    extends:
+      file: elasticsearch.yml
+      service: neighborhood-elasticsearch

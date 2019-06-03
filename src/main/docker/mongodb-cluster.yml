@@ -1,0 +1,16 @@
+version: '2'
+services:
+  neighborhood-mongodb:
+    image: mongo:4.0.9
+    ports:
+      - '27017:27017'
+    command: mongos --configdb neighborhood-mongodb-config
+  neighborhood-mongodb-node:
+    build:
+      context: .
+      dockerfile: mongodb/MongoDB.Dockerfile
+    command: mongod --replSet rs1 --noprealloc --smallfiles
+  neighborhood-mongodb-config:
+    image: mongo:4.0.9
+    container_name: neighborhood-mongodb-config
+    command: mongod --noprealloc --smallfiles --configsvr --dbpath /data/db

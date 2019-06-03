@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "gitCompany": "",
+    "baseName": "neighborhood",
+    "packageName": "com.ngapp",
+    "packageFolder": "com/ngapp",
+    "serverPort": 8080,
+    "serviceDiscoveryType": false,
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "no",
+    "enableHibernateCache": false,
+    "websocket": false,
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "elasticsearch",
+    "enableSwaggerCodegen": false,
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "6.0.1",
+    "jwtSecretKey": "ZDkyOTg0ZmE3Njc0ODQ4YTY4N2I4YzM5YzNjNjU1YjJiNTgyNDdmZTY5MjI4Mjg4ZmI1ZDg4MTFlZjAwZmYyYTE5MjBjNWMyZjM3NmUyODc5OTA2NzI4MWU0NjUwZDMyMTBjNGU2ZWEwZWQ3MDIxYmZlNTYwZmVjZmNlMWZhMTk=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "itachiunited",
+  "repository-name": "neighborhood-grocery"
+}
